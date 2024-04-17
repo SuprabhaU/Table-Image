@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageTableAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZJ-oT-v9L">
+                                <rect key="frame" x="16" y="71" width="361" height="757"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ImageunsplashTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageunsplashTableViewCell" rowHeight="118" id="y0A-I5-SgA" customClass="ImageTableViewCell" customModule="ImageTableAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y0A-I5-SgA" id="j8k-yH-XZ9">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestLoading.gif" translatesAutoresizingMaskIntoConstraints="NO" id="YyQ-Og-DR9">
+                                                    <rect key="frame" x="37" y="0.0" width="201" height="118"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="201" id="UkE-zt-tda"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YyQ-Og-DR9" firstAttribute="centerY" secondItem="j8k-yH-XZ9" secondAttribute="centerY" id="6HG-CN-Q98"/>
+                                                <constraint firstItem="YyQ-Og-DR9" firstAttribute="top" secondItem="j8k-yH-XZ9" secondAttribute="topMargin" constant="-11" id="TeH-pJ-PoY"/>
+                                                <constraint firstItem="YyQ-Og-DR9" firstAttribute="leading" secondItem="j8k-yH-XZ9" secondAttribute="leadingMargin" constant="17" id="oOa-oe-qEX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="YyQ-Og-DR9" id="A0v-gN-9Gy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yMA-PE-6Bl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vuG-9m-s4J"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NZJ-oT-v9L" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="00U-Cc-BsV"/>
+                            <constraint firstItem="NZJ-oT-v9L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7qQ-0E-5UN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NZJ-oT-v9L" secondAttribute="bottom" constant="-10" id="H5o-eD-Vsf"/>
+                            <constraint firstItem="NZJ-oT-v9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="cbG-u5-bV3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgTblView" destination="NZJ-oT-v9L" id="lvc-DF-PQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37.404580152671755" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TestLoading.gif" width="530" height="498"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
